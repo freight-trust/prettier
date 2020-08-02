@@ -1,14 +1,14 @@
-# prettier-config-carbon
+# @freight-trust/prettier-config@1.0.0
+> Prettier config 
 
-> Prettier config for the Carbon Design System
 
 ## Getting started
 
-To install `prettier-config-carbon` in your project, you will need to run the
+To install `@freight-trust/prettier-config` in your project, you will need to run the
 following command using [npm](https://www.npmjs.com/):
 
 ```bash
-npm install -S prettier-config-carbon
+npm install -S @freight-trust/prettier-config
 ```
 
 If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
@@ -26,7 +26,7 @@ in the root of project and using this package in the following way:
 ```js
 'use strict';
 
-const prettierConfig = require('prettier-config-carbon');
+const prettierConfig = require('@freight-trust/prettier-config');
 module.exports = prettierConfig;
 ```
 
