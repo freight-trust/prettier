@@ -1,0 +1,13 @@
+{
+  "name": "@freight-trust/prettier-config",
+  "version": "1.0.0",
+  "description": "prettier configuration",
+  "main": "index.js",
+  "repository": "https://github.com/freight-trist/prettier",
+  "author": "SEE LICENSE",
+  "license": "Apache-2.0",
+  "private": false,
+  "dependencies": {
+    "prettier": "^2.0.5"
+  }
+}
