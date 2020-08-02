@@ -20,6 +20,6 @@ git rebase auto/pre-prettier || {
 squashed_commit=$(git rev-parse HEAD)
 yarn install
 git reset HEAD^
-git diff --name-only | xargs yarn prettier --write 
+git diff --name-only | xargs yarn prettier --write
 git commit --all --no-verify --reuse-message="$squashed_commit"
 git rebase -X theirs post-prettier
