@@ -2,19 +2,19 @@
 
 ISF='' read -r -d '' query <<-END_GQL
 query {
-  repository(owner: "$GITHUB_OWNER", name: "$GITHUB_REPO") { 
-    pullRequests(first:100, states:[OPEN], orderBy:{field: UPDATED_AT, direction:DESC}) { 
-      pageInfo { 
-        hasNextPage 
-        endCursor 
-      } 
-      edges { 
-        node { 
-          headRefName 
-        } 
-      } 
-    } 
-  } 
+  repository(owner: "$GITHUB_OWNER", name: "$GITHUB_REPO") {
+    pullRequests(first:100, states:[OPEN], orderBy:{field: UPDATED_AT, direction:DESC}) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        node {
+          headRefName
+        }
+      }
+    }
+  }
 }
 END_GQL
 
@@ -27,19 +27,19 @@ while [ "$(jq --raw-output '.data.repository.pullRequests.pageInfo.hasNextPage' 
   cursor=$(jq --raw-output '.data.repository.pullRequests.pageInfo.endCursor' <<<"$branches_json")
   ISF='' read -r -d '' query <<-END_GQL
   query {
-    repository(owner: "$GITHUB_OWNER", name: "$GITHUB_REPO") { 
-      pullRequests(first:100, states:[OPEN], orderBy:{field: UPDATED_AT, direction:DESC} after:"$cursor") { 
-        pageInfo { 
-          hasNextPage 
-          endCursor 
-        } 
-        edges { 
-          node { 
-            headRefName 
-          } 
-        } 
-      } 
-    } 
+    repository(owner: "$GITHUB_OWNER", name: "$GITHUB_REPO") {
+      pullRequests(first:100, states:[OPEN], orderBy:{field: UPDATED_AT, direction:DESC} after:"$cursor") {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        edges {
+          node {
+            headRefName
+          }
+        }
+      }
+    }
   }
 END_GQL
 
