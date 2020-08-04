@@ -5,12 +5,12 @@
  * This source code is licensed under the Apache-2.0 license
  */
 
-'use strict';
+"use strict";
 
 module.exports = {
   jsxBracketSameLine: true,
   printWidth: 80,
   singleQuote: true,
-  trailingComma: 'es5',
-  proseWrap: 'always',
+  trailingComma: "es5",
+  proseWrap: "always",
 };

@@ -6,69 +6,69 @@ module.exports = Object.freeze({
     /**
      * Details
      */
-    '$schema',
-    'private',
-    'name',
-    'description',
-    'license',
-    'author',
-    'maintainers',
-    'contributors',
-    'homepage',
-    'repository',
-    'bugs',
-    'version',
-    'type',
+    "$schema",
+    "private",
+    "name",
+    "description",
+    "license",
+    "author",
+    "maintainers",
+    "contributors",
+    "homepage",
+    "repository",
+    "bugs",
+    "version",
+    "type",
 
     /**
      * Yarn specific
      */
-    'workspaces',
+    "workspaces",
 
     /**
      * Configuration
      */
-    'main',
-    'module',
-    'browser',
-    'man',
-    'preferGlobal',
-    'bin',
-    'files',
-    'directories',
-    'scripts',
-    'config',
-    'sideEffects',
-    'types',
-    'typings',
+    "main",
+    "module",
+    "browser",
+    "man",
+    "preferGlobal",
+    "bin",
+    "files",
+    "directories",
+    "scripts",
+    "config",
+    "sideEffects",
+    "types",
+    "typings",
 
     /**
      * Dependencies
      */
-    'optionalDependencies',
-    'dependencies',
-    'bundleDependencies',
-    'bundledDependencies',
-    'peerDependencies',
-    'devDependencies',
+    "optionalDependencies",
+    "dependencies",
+    "bundleDependencies",
+    "bundledDependencies",
+    "peerDependencies",
+    "devDependencies",
 
     /**
      * Used for npm search
      */
-    'keywords',
+    "keywords",
 
     /**
      * Constraints
      */
-    'engines',
-    'engine-strict',
-    'engineStrict',
-    'os',
-    'cpu',
+    "engines",
+    "engine-strict",
+    "engineStrict",
+    "os",
+    "cpu",
 
     /**
      * Package publishing configuration
      */
-    'publishConfig'
-  ]
+    "publishConfig",
+  ],
 });
