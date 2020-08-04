@@ -1,6 +1,6 @@
 # @freight-trust/prettier-config@1.0.0
-> Prettier config 
 
+> Prettier config
 
 ## Getting started
 
@@ -24,9 +24,9 @@ You can use this prettier configuration by creating a `prettier.config.js` file
 in the root of project and using this package in the following way:
 
 ```js
-'use strict';
+"use strict";
 
-const prettierConfig = require('@freight-trust/prettier-config');
+const prettierConfig = require("@freight-trust/prettier-config");
 module.exports = prettierConfig;
 ```
 
