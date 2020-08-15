@@ -1,6 +1,8 @@
-# @freight-trust/prettier-config@1.0.0
+# Prettier with Git Diff/Blame Support
 
-> Prettier config
+`@freight-trust/prettier-config`
+
+> Prettier config with shell scripts to enable better Git Diff/Blame
 
 ## Getting started
 
@@ -29,6 +31,10 @@ in the root of project and using this package in the following way:
 const prettierConfig = require("@freight-trust/prettier-config");
 module.exports = prettierConfig;
 ```
+
+## Shell Scripts
+
+See [./bin](/bin)
 
 ## 🙌 Contributing
 
