@@ -3,11 +3,18 @@
   "version": "1.1.0",
   "description": "prettier configuration",
   "main": "index.js",
-  "repository": "https://github.com/freight-trist/prettier",
+  "repository": "https://github.com/freight-trust/prettier",
   "author": "SEE LICENSE",
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
+    "jest": "^26.4.0",
     "prettier": "^2.0.5"
-  }
+  },
+  "scripts": { 
+    "prettify-upgrade" : ". ./bin/upgrade-branches.sh",
+    "prettify-all" : ". ./bin/prettify-all.sh",
+    "test": "jest"
+    } 
+
 }
