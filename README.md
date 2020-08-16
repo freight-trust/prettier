@@ -1,8 +1,12 @@
 # Prettier with Git Diff/Blame Support
 
-`@freight-trust/prettier-config`
-
 > Prettier config with shell scripts to enable better Git Diff/Blame
+
+[![Build Status](https://travis-ci.com/freight-trust/prettier.svg?branch=master)](https://travis-ci.com/freight-trust/prettier)
+
+## Overview
+
+Contains Shell Scripts for making Git Diff/Blame's easier using Prettier
 
 ## Getting started
 
