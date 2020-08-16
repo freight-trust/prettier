@@ -7,7 +7,7 @@ branches_json=$(curl --silent -H "Authorization: bearer $GITHUB_KEY" -X POST -d 
 
 jq --raw-output '.data.repository.pullRequests.edges | .[] | .node.headRefName' <<< $branches_json
 
-while [ $(jq --raw-output '.data.repository.pullRequests.pageInfo.hasNextPage' <<< $branches_json) = "true" ]; do
+while [ "$(jq --raw-output '.data.repository.pullRequests.pageInfo.hasNextPage' <<< $branches_json)" = "true" ]; do
   cursor=$(jq --raw-output '.data.repository.pullRequests.pageInfo.endCursor' <<< $branches_json)
   ISF='' read -r -d '' query <<-END_GQL 
   query {

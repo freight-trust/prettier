@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-script_dir=$(dirname $0)
+script_dir=$PWD
 branch=$(git symbolic-ref --short HEAD)
 backup_tag=$branch-auto-prettier-backup
 merge_base_commit=$(git merge-base master $branch)
