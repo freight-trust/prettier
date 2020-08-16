@@ -2,7 +2,7 @@
 set -e
 script_dir=$(dirname $0)
 current_branch=$(git symbolic-ref --short HEAD)
-for branch in $@; do
+for branch in "$@"; do
   git checkout $branch
   git pull origin $branch
   $script_dir/upgrade-branch.sh || continue
