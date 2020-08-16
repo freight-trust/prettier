@@ -1,0 +1,6 @@
+language: shell
+os: linux
+
+script:
+  # Fail if any of these files have warnings
+  - shellcheck bin/*.sh

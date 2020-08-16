@@ -1,15 +1,5 @@
 #!/bin/bash
 set -e
-<<<<<<< HEAD
-script_dir=$(dirname "$0")
-branch=$(git symbolic-ref --short HEAD)
-backup_tag=$branch-auto-prettier-backup
-merge_base_commit=$(git merge-base master "$branch")
-author=$(git log --format="%aN <%aE>" --max-count=1)
-git tag "$backup_tag"
-git reset --hard "$merge_base_commit"
-git merge --squash "$backup_tag"
-=======
 script_dir=$(dirname $0)
 branch=$(git symbolic-ref --short HEAD)
 backup_tag=$branch-auto-prettier-backup
@@ -18,29 +8,18 @@ author=$(git log --format="%aN <%aE>" --max-count=1)
 git tag $backup_tag
 git reset --hard $merge_base_commit
 git merge --squash $backup_tag
->>>>>>> feat/automated
 git commit --no-verify --no-edit --author="$author"
 git rebase auto/pre-prettier || {
   echo "conflicts during rebase for branch $branch"
   git rebase --abort
   git checkout --detach
-<<<<<<< HEAD
-  git branch -f "$branch" "$backup_tag"
-  git tag -d "$backup_tag"
-=======
   git branch -f $branch $backup_tag
   git tag -d $backup_tag
->>>>>>> feat/automated
   exit 1
 }
 squashed_commit=$(git rev-parse HEAD)
 yarn install
 git reset HEAD^
-<<<<<<< HEAD
-git diff --name-only | xargs yarn prettier --write
-git commit --all --no-verify --reuse-message="$squashed_commit"
-=======
 git diff --name-only | xargs yarn prettier --write 
 git commit --all --no-verify --reuse-message=$squashed_commit
->>>>>>> feat/automated
 git rebase -X theirs post-prettier
