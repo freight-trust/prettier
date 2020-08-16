@@ -5,6 +5,8 @@ git checkout master
 git pull origin master
 yarn add prettier@latest
 version=$(yarn --silent prettier --version)
-git commit --all --message="⬆️ upgrade prettier to version $version"
+git commit --all --message="^semver: upgrade prettier to version $version"
 git tag pre-prettier
 $script_dir/prettify-all.sh
+
+exit 0

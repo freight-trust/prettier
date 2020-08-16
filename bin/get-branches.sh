@@ -2,24 +2,6 @@
 
 echo "must have jq installed..."
 
-ISF='' read -r -d '' query <<-END_GQL 
-query {
-  repository(owner: "$GITHUB_OWNER", name: "$GITHUB_REPO") { 
-    pullRequests(first:100, states:[OPEN], orderBy:{field: UPDATED_AT, direction:DESC}) { 
-      pageInfo { 
-        hasNextPage 
-        endCursor 
-      } 
-      edges { 
-        node { 
-          headRefName 
-        } 
-      } 
-    } 
-  } 
-}
-END_GQL
-
 query_json=$(jq -n --arg query "$query" '{"query": $query}')
 branches_json=$(curl --silent -H "Authorization: bearer $GITHUB_KEY" -X POST -d "$query_json" https://api.github.com/graphql)
 

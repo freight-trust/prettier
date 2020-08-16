@@ -1,8 +1,11 @@
 #!/bin/bash
 set -e
+
 timestamp=$(date +"%Y-%m-%d")
 git tag pre-prettier-$timestamp pre-prettier
 git tag post-prettier-$timestamp post-prettier
+
+echo "timestamping..."
 git push origin pre-prettier-$timestamp post-prettier-$timestamp
 
 sleep 1
