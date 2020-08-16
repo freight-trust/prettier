@@ -1,6 +1,6 @@
 {
   "name": "@freight-trust/prettier-config",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "prettier configuration",
   "main": "index.js",
   "repository": "https://github.com/freight-trust/prettier",
