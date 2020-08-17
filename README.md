@@ -4,6 +4,10 @@
 
 > Prettier config with shell scripts to enable better Git Diff/Blame
 
+## Conventions
+
+Prefer `// eslint-disable-next-line` over `// eslint-disable-line`.
+
 ## Getting started
 
 To install `@freight-trust/prettier-config` in your project, you will need to run the

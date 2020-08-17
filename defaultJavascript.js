@@ -1,4 +1,4 @@
-module.exports = Object.freeze({
+export default Object.freeze({
   useTabs: false,
   tabWidth: 2,
   expandUsers: false,
