@@ -15,7 +15,7 @@ module.exports = {
       {
         files: '{*.edi?(on),*.x12,*.edifact,*.xml}',
         options: {
-            parser: 'json5',
+            parser: 'json5', // we use Json5 parser as Numbers may be IEEE 754 positive infinity, negative infinity, and NaN 
             quoteProps: 'preserve',
             singleQuote: false,
             trailingComma: 'all',
